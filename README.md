@@ -2,10 +2,10 @@
 
 ## Task details
 
-- We will be testing your ability to understand an existing React/Typescript codebase understand what is already and build what is not
+- We will be testing your ability to assess an existing React/Typescript codebase, understand what is already built, and build what is not.
 - You will be building a form using the CRUK React Component Library and a form library of your choice such React Hook Form or Formik and a validation library of your choice such as Zod or Yup.
-- This form which will fetch assets from the NASA Images and Video Library API The fields described below will modify the search query.
-- The media returned should be displayed in list below the form, these may be images, video, or audio clips. It is up to you how you display these
+- This form which will fetch assets from the NASA Images and Video Library API. The fields described below will modify the search query.
+- The media returned should be displayed in a list below the form, these may be images, video, or audio clips. It is up to you how you display these
 - The user should only see the first 10 items on the page. If you have time, getting this working with some form pagination is a stretch target.
 - Code must be clean and production ready, quality is better than quantity.
 - Feel free to edit this readme or add a new readme file for any additional information, such as what you might do improve your application in the future.
