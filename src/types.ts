@@ -34,3 +34,8 @@ export type LinkType = {
   rel: string;
   render: string;
 };
+
+export type FormComponentDefinition = {
+  type: string;
+  label: string;
+}
