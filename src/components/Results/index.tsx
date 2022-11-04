@@ -8,6 +8,7 @@ type ResultsProps = {
 };
 
 export const Results = ({ searchParams }: ResultsProps) => {
+  console.log('Querying nasa', searchParams);
   const { data: resultSet, error, isFetching } = useNasaQuery(searchParams);
 
   if (isFetching) {
@@ -21,7 +22,7 @@ export const Results = ({ searchParams }: ResultsProps) => {
         {resultSet?.collection.items.slice(0, 10).map(({data, href, links}) => <li key={href}>
             <Result data={data} href={href} links={links} />
           </li>
-        )};
+        )}
       </ul>
     </>
   );

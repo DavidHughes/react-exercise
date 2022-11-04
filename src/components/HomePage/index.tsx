@@ -1,5 +1,6 @@
 import { Heading, Text, Box } from "@cruk/cruk-react-components";
 import { NasaSearchParams } from "../../types";
+import { useState } from "react";
 
 import Results from "../Results";
 import InputForm from "../InputForm";
@@ -14,17 +15,25 @@ export const HomePage = () => {
     mediaType: "video",
   };
 
+  const [params, setParams] = useState(exampleParam)
+
+  const onChange = (newParams: NasaSearchParams) => {
+    console.log('New params: ', newParams);
+    setParams(newParams)
+  }
+
   return (
     <Box marginTop="s" paddingTop="s">
       <Heading h1>React Exercise</Heading>
 
       <InputForm 
-        keywords={exampleParam.keywords} 
-        yearStart={exampleParam.yearStart}
-        mediaType={exampleParam.mediaType}
+        keywords={params.keywords} 
+        yearStart={params.yearStart}
+        mediaType={params.mediaType}
+        onChange={onChange}
       />
 
-      <Results searchParams={exampleParam} />
+      <Results searchParams={params} />
     </Box>
   );
 };

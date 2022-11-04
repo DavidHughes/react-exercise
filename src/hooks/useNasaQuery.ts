@@ -8,7 +8,7 @@ export const useNasaQuery = (params: NasaSearchParams | undefined) => {
 
   // if params is empty then no request happens
   return useQuery<NasaResponse>(
-    ["nasaSearch"],
+    ["nasaSearch", params],
     () => fetch(urlNasaSearchUrl).then((res) => res.json()),
     { enabled: !!params }
   );
