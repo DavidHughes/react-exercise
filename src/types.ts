@@ -19,7 +19,7 @@ export type NasaResponse = {
 };
 
 export type ItemsType = {
-  href: string;
+  href?: string;
   data: DataType[];
   links: LinkType[];
 };
