@@ -25,20 +25,20 @@ export type ItemsType = {
 };
 
 export type DataType = {
-  center: string;
-  title: string;
   keywords: string[];
-  location: string;
   nasa_id: string;
-  date_created: string;
   media_type: string;
   description: string;
+  center?: string;
+  title?: string;
+  location?: string;
+  date_created?: string;
 };
 
 export type LinkType = {
   href: string;
-  rel: string;
-  render: string;
+  rel?: string;
+  render?: string;
 };
 
 export type FormComponentDefinition = {
