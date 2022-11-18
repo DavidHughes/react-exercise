@@ -24,7 +24,6 @@ export const InputForm = ({keywords, yearStart, mediaType, onChange}) => {
             <Select label="Media Type" onChange={updateType} value={media}>
                 {MEDIA_TYPES.map(({type, label}) => <option key={type} value={type}>{label}</option>)}
             </Select>
-            {/* <Button onClick={updateState}>Search</Button> */}
         </form>
     )
 }
