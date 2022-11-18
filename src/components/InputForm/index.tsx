@@ -14,11 +14,6 @@ export const InputForm = ({keywords, yearStart, mediaType, onChange}) => {
         event.preventDefault();
     }
 
-    const updateState = (event: Event) => {
-        onChange({keywords, yearStart, mediaType: media})
-        event.preventDefault();
-    }
-
     return (
         <form>
             <Select label="Media Type" onChange={updateType} value={media}>
