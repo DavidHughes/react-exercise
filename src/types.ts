@@ -1,8 +1,14 @@
+export type MediaTypes = "audio" | "video" | "image";
+
 export type NasaSearchParams = {
   keywords: string;
   yearStart: number;
-  mediaType: "audio" | "video" | "image";
+  mediaType: MediaTypes;
 };
+
+export type MediaSelectElement = HTMLSelectElement & {
+  value: MediaTypes;
+}
 
 export type NasaResponse = {
   collection: {
@@ -38,4 +44,11 @@ export type LinkType = {
 export type FormComponentDefinition = {
   type: string;
   label: string;
+}
+
+export type Inputs = {
+  keywords: string,
+  yearStart: number,
+  mediaType: string,
+  onChange: (params: NasaSearchParams) => void,
 }

@@ -1,16 +1,17 @@
-import { Select, Button } from "@cruk/cruk-react-components"
-import { useState } from "react"
+import { Select } from "@cruk/cruk-react-components"
+import { ChangeEvent, useState } from "react"
 import MEDIA_TYPES from "../../constants"
+import { Inputs, MediaSelectElement } from "../../types"
 
-export const InputForm = ({keywords, yearStart, mediaType, onChange}) => {
+export const InputForm = ({keywords, yearStart, mediaType, onChange}: Inputs) => {
     console.log(keywords, yearStart, mediaType);
 
     const [ media, setMedia ] = useState(mediaType ?? '');
 
-    const updateType = (event: Event) => {
+    const updateType = (event: ChangeEvent<MediaSelectElement>) => {
         console.log('New type selected:', event)
         setMedia(event.target?.value);
-        onChange({keywords, yearStart, mediaType: event.target?.value})
+        onChange({keywords, yearStart, mediaType: event.target?.value })
         event.preventDefault();
     }
 
@@ -23,4 +24,4 @@ export const InputForm = ({keywords, yearStart, mediaType, onChange}) => {
     )
 }
 
-export default InputForm
+export default InputForm;
